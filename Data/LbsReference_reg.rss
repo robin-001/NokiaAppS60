@@ -1,0 +1,27 @@
+/*
+* ==============================================================================
+*  Name        : LBSReference_reg.rss
+*  Part of     : LBSReference example application
+*  Interface   : 
+*  Description : Application registration resource
+*  Version     : 1.0
+*
+*  Copyright (c) 2005-2006 Nokia Corporation.
+*  This material, including documentation and any related 
+*  computer programs, is protected by copyright controlled by 
+*  Nokia Corporation.
+* ==============================================================================
+*/
+
+#include <appinfo.rh>
+#include <LbsReference.rsg>
+
+UID2 KUidAppRegistrationResourceFile
+UID3 0xA0000189
+
+RESOURCE APP_REGISTRATION_INFO 
+    {
+    app_file="LbsReference";
+    localisable_resource_file = "\\resource\\apps\\LBSReference";
+    localisable_resource_id = R_LBS_LOCALISABLE_APP_INFO;
+    }

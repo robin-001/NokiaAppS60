@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" standalone="yes" ?>
+<location_centre_registration>
+	<service uuid="SIDA0000189_A">
+		<name lang="en">RefApp</name>
+		<icon file="\resource\apps\lrefappfors60_aif.mif" frame="1"/>
+		<feature>Navigation</feature>
+		<feature>LocalContent</feature>
+		<runmode default="standalone"/>
+		<application>
+			<native sid="[A0000189]" />
+		</application>
+	</service>
+</location_centre_registration>

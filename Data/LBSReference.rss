@@ -1,0 +1,67 @@
+/*
+* ==============================================================================
+*  Name        : LBSReference.rss
+*  Part of     : LBSReference example application
+*  Interface   : 
+*  Description : Resource file
+*  Version     : 1.0
+*
+*  Copyright (c) 2005-2006 Nokia Corporation.
+*  This material, including documentation and any related 
+*  computer programs, is protected by copyright controlled by 
+*  Nokia Corporation.
+* ==============================================================================
+*/
+
+//  RESOURCE IDENTIFIER
+NAME    LBSR // 4 letter ID
+
+//  INCLUDES
+
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.hrh>
+#include <avkon.rh>
+#include <appinfo.rh>
+
+//  RESOURCE DEFINITIONS 
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF { buf="LBSReference"; }
+
+RESOURCE EIK_APP_INFO
+    {
+    cba=R_AVKON_SOFTKEYS_EXIT;     
+    }
+
+RESOURCE ARRAY r_loc_ref_list_array
+    {
+
+    items =
+        {
+        LBUF {txt = "\tInitialising\tPlease wait..."; }
+        };
+
+    }
+
+
+RESOURCE LISTBOX r_loc_listbox_resource
+    {
+    array_id = r_loc_ref_list_array;
+    flags = EAknListBoxViewerFlags;
+    }
+
+RESOURCE LOCALISABLE_APP_INFO r_lbs_localisable_app_info
+    {
+    short_caption = "Lbs Ref";
+    caption_and_icon = CAPTION_AND_ICON_INFO 
+	{
+        caption="Lbs Reference App";
+        number_of_icons = 1;
+	icon_file = 
+        	"\\resource\\apps\\lrefappfors60_aif.mif";
+            };
+    }
+
+// End of File

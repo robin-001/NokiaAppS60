@@ -1,0 +1,63 @@
+/*
+* ==============================================================================
+*  Name        : LBSReference.mmp
+*  Part of     : LBSReference example application
+*  Interface   : 
+*  Description : 
+*  Version     : 1.0
+*
+*  Copyright (c) 2005-2006 Nokia Corporation.
+*  This material, including documentation and any related 
+*  computer programs, is protected by copyright controlled by 
+*  Nokia Corporation.
+* ==============================================================================
+*/
+
+TARGET          LBSReference.exe
+TARGETTYPE      exe
+UID             0x100039CE 0xA0000189 
+
+EPOCSTACKSIZE   0x5000
+CAPABILITY      Location
+
+VENDORID        0
+
+USERINCLUDE     . ..\inc
+SYSTEMINCLUDE   \epoc32\include
+
+SOURCEPATH ..\src
+SOURCE    LBSReferenceApp.cpp 
+SOURCE    LBSReferenceAppUi.cpp
+SOURCE    LBSReferenceDocument.cpp
+SOURCE    LBSReferenceContainer.cpp
+SOURCE    LBSPositionRequestor.cpp
+SOURCE    LBSReference_Main.cpp
+
+// UI Resources
+SOURCEPATH          ..\data
+START RESOURCE      LBSReference.rss
+HEADER
+TARGETPATH          resource\apps
+LANG                SC
+END
+
+// Application registration info for installer
+SOURCEPATH          ..\data
+START RESOURCE      LbsReference_reg.rss
+#ifdef WINSCW
+TARGETPATH 	  \private\10003a3f\apps
+#else
+TARGETPATH 	  \private\10003a3f\import\apps
+#endif
+END
+
+LIBRARY     euser.lib
+LIBRARY     apparc.lib
+LIBRARY     cone.lib
+LIBRARY     eikcore.lib
+LIBRARY     eikcoctl.lib    // MDesCArray
+LIBRARY     eikctl.lib      // list box model
+LIBRARY     avkon.lib       // akn list box
+LIBRARY     bafl.lib        // CDesCArray
+LIBRARY     lbs.lib         // Location acquisition API
+

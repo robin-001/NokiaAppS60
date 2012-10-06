@@ -1,0 +1,29 @@
+/*
+* ==============================================================================
+*  Name        : bld.inf
+*  Part of     : LBSReference example application
+*  Interface   : 
+*  Description : 
+*  Version     : 1.0
+*
+*  Copyright (c) 2005-2006 Nokia Corporation.
+*  This material, including documentation and any related 
+*  computer programs, is protected by copyright controlled by 
+*  Nokia Corporation.
+* ==============================================================================
+*/
+
+
+PRJ_PLATFORMS
+
+PRJ_EXPORTS
+../Data/lcreg_A0000189.xml /epoc32/winscw/c/private/A0000189/import/lcreg_A0000189.xml
+../Data/lcreg12345678.xml /epoc32/winscw/c/private/A0000189/import/lcreg12345678.xml
+
+
+PRJ_MMPFILES
+gnumakefile Icons_scalable_dc.mk
+LBSReference.mmp
+
+PRJ_TESTMMPFILES
+//  End of File

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<location_centre_registration>
+	<service uuid=“forum.nokia.com-lbs-2009">
+		<name lang="en">Location based services - Forum Nokia</name>
+		<feature>NetworkService</feature>
+ 		<runmode default="standalone"/>
+		<webService url="http://forum.nokia.com/lbs"/>
+	</service>
+</location_centre_registration>

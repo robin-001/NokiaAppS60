@@ -1,0 +1,30 @@
+;
+; Installation file for LBSReference application
+
+; Languages, (English only)
+&EN
+
+; UID is the app's UID
+#{"LBS Reference"},(0xA0000189),1,0,0,TYPE=SA
+
+;S60 v3.0
+[0x101f7961], 0, 0, 0, {"S60ProductID"}
+
+; Localised Vendor name
+%{"Vendor-EN"}
+
+; Unique Vendor name
+:"Vendor"
+
+;
+; Four files to install
+;
+
+"..\..\..\epoc32\RELEASE\armv5\UREL\LbsReference.exe"                   	-"!:\sys\bin\LbsReference.exe"
+"..\..\..\epoc32\data\z\resource\apps\LBSReference.RSC"                 	-"!:\resource\apps\LBSreference.RSC"
+"..\..\..\epoc32\data\z\private\10003a3f\import\apps\LbsReference_reg.RSC"  -"!:\private\10003a3f\import\apps\LbsReference_reg.RSC"
+"..\..\..\epoc32\data\z\resource\apps\lrefappfors60_aif.mif"				-"!:\resource\apps\lrefappfors60_aif.mif"
+
+;required for application to be covered by backup/restore facility 
+"..\data\backup_registration.xml"						-"!:\private\A0000189\backup_registration.xml"
+"..\data\lcreg12345678.xml" 							-"!:\private\A0000189\import\lcreg12345678.xml"
